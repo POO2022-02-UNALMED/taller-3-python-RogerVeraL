@@ -43,6 +43,12 @@ class TV:
     def setNumTV(self,numTV):
         self.numTV=numTV
 
+    def getVolumen(self):
+        return self.volumen
+    def setVolumen(self, volumen):
+        if self.getEstado()==True and 0<=volumen<=7:
+            self._volumen = volumen
+    
     def turnOn(self):
         self.setEstado(True)
     def turnOff(self):
