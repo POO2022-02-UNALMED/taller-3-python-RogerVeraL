@@ -1,9 +1,11 @@
-from marca import Marca
-from tv import TV
+#from marca import Marca
+#from tv import TV
 
 class Control():
-    tv=TV()
-
+    #tv=TV()
+    def __init__(self):
+        self._tv = None
+        
     def getTv(self):
         return self.tv
     def setTv(self,tv):

@@ -1,4 +1,5 @@
-
+from televisores.control import Control
+from televisores.marca import Marca
 class TV:
     numTV=0
     def __init__(self,marca,estado) :
@@ -31,13 +32,14 @@ class TV:
         if 0<=canal<=120 and self.getEstado()==True:
             self.canal=canal
 
-    def getPrecio (self):
-        return self.precio
-    def setPrecio (self,precio):
-        self.precio=precio
-
+    def getPrecio (cls):
+        return cls.precio
+    def setPrecio (cls,precio):
+        cls.precio=precio
+    @classmethod
     def getNumTV(self):
         return self.numTV
+    @classmethod
     def setNumTV(self,numTV):
         self.numTV=numTV
 
