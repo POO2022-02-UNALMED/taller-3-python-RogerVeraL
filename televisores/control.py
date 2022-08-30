@@ -7,9 +7,9 @@ class Control():
         self._tv = None
         
     def getTv(self):
-        return self.tv
+        return self._tv
     def setTv(self,tv):
-        self.tv=tv
+        self._tv=tv
     
     def turnOn(self):
         self._tv.turnOn()
